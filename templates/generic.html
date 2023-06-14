@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lyrics Generator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Let's generate some exciting lyrics!</h2>
+							<p></p>
+						</header>
+						<section class="wrapper style5">
+							<hr>
+							<div class="container">	
+								<form action = "{{url_for('result')}}" method = "POST">
+								   <center>
+								   <h4><label class="enter-text">Enter your text</label></h4><br>
+								   <h6><p><i>(Characters should be less than 40)</i></p></h6>
+								   </center>
+								   <div class="predict-box">
+									  
+										<center>
+										
+										<textarea id="text-enter" name="text-enter" rows="4" cols="50" placeholder="Enter your text">
+											
+										</textarea>
+										 
+										</center>
+									  
+								   </div> <br> <br>
+								   <ul class="actions special">
+									<li><input type="submit" value="Predict!" class="primary" /></li>
+								   </ul>
+							  </form>
+						   </div>
+						   <hr>
+						</section>
+					</article>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Made by: <a href="https://riabhatnagar-projects.netlify.app/">Ria Bhatnagar</a></li>
+					</ul>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!-- <script src="../static/js/jquery.min.js"></script> -->
+			<script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+			<!-- <script src="../static/js/jquery.scrollex.min.js"></script> -->
+			<script src="{{ url_for('static', filename = 'js/jquery.scrollex.min.js') }}"></script>
+			<!-- <script src="../static/js/jquery.scrolly.min.js"></script> -->
+			<script src="{{ url_for('static', filename = 'js/jquery.scrolly.min.js') }}"></script>
+			<!-- <script src="../static/js/browser.min.js"></script> -->
+			<script src="{{ url_for('static', filename = 'js/browser.min.js') }}"></script>
+			<!-- <script src="../static/js/breakpoints.min.js"></script> -->
+			<script src="{{ url_for('static', filename = 'js/breakpoints.min.js') }}"></script>
+			<!-- <script src="../static/js/util.js"></script> -->
+			<script src="{{ url_for('static', filename = 'js/util.js') }}"></script>
+			<!-- <script src="../static/js/main.js"></script> -->
+			<script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+	</body>
+</html>
