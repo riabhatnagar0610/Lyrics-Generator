@@ -5,8 +5,8 @@ import tensorflow as tf
 import numpy as np
 
 app = Flask(__name__)
-# model = joblib.load('lyrics-v1.pkl')
-model = tf.keras.models.load_model('model.h5')
+# model = joblib.load('lyrics-final.pkl')
+model = tf.keras.models.load_model('model_lyrics.h5')
 
 app.static_folder = 'static'
 
