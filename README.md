@@ -17,6 +17,8 @@ A lyrics generation project that utilizes a Long Short-Term Memory (LSTM) model 
 
 The Lyrics-Generator project is designed to generate song lyrics based on user input. It utilizes an LSTM model trained on a large collection of lyrics from various artists to learn the patterns and structures of song lyrics. Given an initial line or phrase provided by the user, the model generates a set of lyrics that are coherent and stylistically similar to the input.
 
+LSTMs are a specialized type of recurrent neural network architecture that enables the modeling of sequential data by maintaining a memory of past information and selectively storing or discarding information at each time step. This design allows LSTMs to capture long-term dependencies and has made them a powerful tool in various domains of machine learning and artificial intelligence.
+
 This project is built using the Flask framework, which allows for easy deployment and interaction with the generated lyrics through a web interface. The frontend is developed using HTML, CSS, and JavaScript to provide a user-friendly experience.
 
 ## Technologies Used
