@@ -63,6 +63,8 @@ To set up the Lyrics-Generator project locally, follow these steps:
 
 ## Usage
 
+The main code for the Jupyter notebook can be found at `lyrics-generator-using-rnn.ipynb`
+
 1. Open the Lyrics-Generator web application in your preferred web browser.
 
 2. Enter an initial line or phrase in the provided input field.
