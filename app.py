@@ -32,7 +32,7 @@ def Lyrics_Generator(starter,Ch_count=500): #,temperature=1.0):
     generated= ""
     starter = starter 
     global seed
-    L_symb = 47
+    L_symb = 40
     
     seed=[mapping[char] for char in starter]
     generated += starter 
@@ -59,11 +59,17 @@ def Lyrics_Generator(starter,Ch_count=500): #,temperature=1.0):
 
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
-   if request.method == 'POST':
-      lyrics = str(request.form.get('text-enter'))
-      prediction = Lyrics_Generator(lyrics)
-      # prediction = "{:,}".format(prediction)
-      return render_template('elements.html', prediction = prediction)
+    if request.method == 'POST':
+        lyrics = str(request.form.get('text-enter'))
+
+        if len(lyrics) > 40:
+            lyrics = lyrics[:40]
+        elif len(lyrics) < 40:
+            lyrics = lyrics + " "*(40-len(lyrics))
+            
+        prediction = Lyrics_Generator(lyrics)
+        # prediction = "{:,}".format(prediction)
+        return render_template('elements.html', prediction = prediction)
 
 if __name__ == '__main__':
    app.run(debug = True)
