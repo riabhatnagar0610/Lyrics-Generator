@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> -->
 	</head>
 	<body class="is-preload">
 
@@ -31,17 +31,17 @@
 								<form action = "{{url_for('result')}}" method = "POST">
 								   <center>
 								   <h4><label class="enter-text">Enter your text</label></h4><br>
-								   <h6><p><i>(Characters should be less than 40)</i></p></h6>
+								   <!-- <h6><p><i>(Characters should be less than 40)</i></p></h6> -->
 								   </center>
 								   <div class="predict-box">
 									  
-										<center>
+										<!-- <center> -->
 										
-										<textarea id="text-enter" name="text-enter" rows="4" cols="50" placeholder="Enter your text">
-											
-										</textarea>
+										<!-- <textarea id="text-enter" name="text-enter" rows="4" cols="50" placeholder="Enter your text"> -->
+										<input type="text" id="text-enter" name="text-enter" placeholder="Enter your text">
+										<!-- </textarea> -->
 										 
-										</center>
+										<!-- </center> -->
 									  
 								   </div> <br> <br>
 								   <ul class="actions special">
@@ -60,7 +60,7 @@
 						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>Made by: <a href="https://riabhatnagar.netlify.app/">Ria Bhatnagar</a></li>
+						<li>Made by: <a href="https://riabhatnagar-projects.netlify.app/">Ria Bhatnagar</a></li>
 					</ul>
 				</footer>
 
